@@ -1,9 +1,10 @@
-*.tfstate
-*.tfstate.*.backup
-*.tfstate.backup
-*.tfvars
-.terraform/
-terraform/Easy_Travel_Terraform.pem
-terraform/.terraform.lock.hcl
-terraform/Easy_Travel_Terraform.ppk
-scripts/install_docker.sh
+EasyTravel Dynatrace/terraform/Easy_Travel_Terraform.pem
+EasyTravel Dynatrace/scripts/install_docker.sh
+EasyTravel Dynatrace/terraform/Easy_Travel_Terraform.ppk
+EasyTravel Dynatrace/terraform/.terraform.lock.hcl
+EasyTravel Dynatrace/scripts/terraform.tfstate
+EasyTravel Dynatrace/terraform/terraform.tfstate
+EasyTravel Dynatrace/terraform/terraform.tfstate.backup
+EasyTravel Dynatrace/terraform/.terraform/providers/registry.terraform.io/hashicorp/aws/4.67.0/windows_amd64/terraform-provider-aws_v4.67.0_x5.exe
+EasyTravel Dynatrace/terraform/.terraform/providers/registry.terraform.io/hashicorp/null/3.2.1/windows_amd64/terraform-provider-null_v3.2.1_x5.exe
+.gitignore
