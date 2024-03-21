@@ -1,0 +1,9 @@
+*.tfstate
+*.tfstate.*.backup
+*.tfstate.backup
+*.tfvars
+.terraform/
+terraform/Easy_Travel_Terraform.pem
+terraform/.terraform.lock.hcl
+terraform/Easy_Travel_Terraform.ppk
+scripts/install_docker.sh
