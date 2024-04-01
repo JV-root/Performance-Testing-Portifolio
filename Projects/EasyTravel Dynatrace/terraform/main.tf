@@ -68,7 +68,7 @@ resource "aws_security_group" "Easy_Travel_security_group" {
 
 # Criação da instância EC2
 resource "aws_instance" "Easy_Travel_Instance" {
-  ami           = "ami-020b67a2ac4c2c3b6"
+  ami           = "ami-0ac2886caf2877ccd"
   instance_type = "t2.medium"
   key_name = "Easy_Travel_Terraform"
 
@@ -102,4 +102,42 @@ resource "aws_eip_association" "Easy_Travel_eip_association" {
 
 resource "null_resource" "Easy_Travel_trigger" {
   depends_on = [aws_instance.Easy_Travel_Instance]
+}
+
+
+
+# INJETORA JMETER
+# Criação da segunda instância EC2
+resource "aws_instance" "JMeter_Server" {
+  ami           = "ami-0ac2886caf2877ccd"
+  instance_type = "t2.medium"
+  key_name      = "Easy_Travel_Terraform"
+
+  subnet_id     = aws_subnet.Easy_Travel_Subnet.id
+  vpc_security_group_ids = [aws_security_group.Easy_Travel_security_group.id]
+
+  ebs_block_device {
+    device_name = "/dev/sda1"
+    volume_size = 30
+  }
+
+  tags = {
+    Name = "JMeter_Server"
+  }
+}
+
+# Criação Elastic IP
+resource "aws_eip" "JMeter_Server_eip" {
+  vpc = true
+}
+
+# Associação do Elastic IP à instância EC2
+resource "aws_eip_association" "JMeter_Server_eip_association" {
+  instance_id   = aws_instance.JMeter_Server.id
+  allocation_id = aws_eip.JMeter_Server_eip.id
+}
+
+# Recurso nulo apenas para acionar a criação da instância EC2 e associação do Elastic IP
+resource "null_resource" "JMeter_Server_trigger" {
+  depends_on = [aws_instance.JMeter_Server]
 }

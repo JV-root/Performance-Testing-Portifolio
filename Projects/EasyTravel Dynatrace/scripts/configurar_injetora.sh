@@ -1,16 +1,16 @@
 #!/bin/bash
 
 # Atualiza os pacotes do sistema operacional
-sudo yum update -y
+sudo apt-get update && sudo apt-get upgrade -y
 
 # Instala o Java Development Kit (JDK)
-sudo yum install -y java-1.8.0-openjdk
+sudo apt install -y openjdk-11-jre
 
 # Baixa o pacote binário do Apache JMeter
-wget https://downloads.apache.org/jmeter/binaries/apache-jmeter-5.4.1.tgz
+wget https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-5.4.2.tgz
 
 # Extrai o pacote do JMeter
-tar -xvf apache-jmeter-5.4.1.tgz
+tar -xvf apache-jmeter-5.4.2.tgz
 
 # Navega para o diretório do JMeter
 cd apache-jmeter-5.4.1/
