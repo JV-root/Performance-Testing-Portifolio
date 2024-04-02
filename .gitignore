@@ -10,3 +10,4 @@ Projects/EasyTravel Dynatrace/terraform/.terraform/providers/registry.terraform.
 .gitignore
 
 
+Projects/EasyTravel Dynatrace/terraform/.terraform.tfstate.lock.info

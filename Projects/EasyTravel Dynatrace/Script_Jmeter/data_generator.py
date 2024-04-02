@@ -13,7 +13,7 @@ states = ['SP', 'RJ', 'MG', 'RS', 'PR', 'SC']
 # Lista para armazenar as linhas do CSV
 rows = []
 
-# Gerar as 50 linhas
+# Gerar Dados
 for _ in range(100000):
     first_name = generate_random_string(5)
     last_name = generate_random_string(8)
@@ -23,16 +23,17 @@ for _ in range(100000):
     street = generate_random_string(10)
     door = random.randint(1, 100)
     phone = f"({random.randint(10, 99)}) 9{random.randint(1000, 9999)}-{random.randint(1000, 9999)}"
+    credit_card = f"{random.randint(1000, 9999)}{random.randint(1000, 9999)}{random.randint(1000, 9999)}{random.randint(100, 999)}"
 
-    rows.append([first_name, last_name, email, password, state, street, door, phone])
+    rows.append([first_name, last_name, email, password, state, street, door, phone, credit_card])
 
 # Nome do arquivo CSV
-filename = "dados.csv"
+filename = "Massa_Dados.csv"
 
 # Escrever as linhas no arquivo CSV
 with open(filename, 'w', newline='') as csvfile:
     writer = csv.writer(csvfile, delimiter=',')
-    writer.writerow(['first_name', 'last_name', 'email', 'password', 'state', 'street', 'door', 'phone'])  # Escreve o cabeçalho
+    writer.writerow(['first_name', 'last_name', 'email', 'password', 'state', 'street', 'door', 'phone','credit_card'])  # Escreve o cabeçalho
     writer.writerows(rows)
 
 print(f"Arquivo '{filename}' gerado com sucesso!")
