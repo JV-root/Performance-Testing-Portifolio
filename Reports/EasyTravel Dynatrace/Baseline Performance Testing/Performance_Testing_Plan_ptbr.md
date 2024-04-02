@@ -82,8 +82,6 @@ Durante os testes, será implementada uma rampa gradual de usuários para simula
 | Estabilização da Carga           | A carga é mantida constante em 30 usuários por um período de 10 minutos.                                          |
 | Encerramento Gradual das Threads | Após os 10 minutos de estabilização, as threads são gradualmente encerradas a cada 20 segundos.                   |
 | Duração Total do Teste           | O teste terá uma duração total de 30 minutos.                                                                     |
-| Largura de Banda                 | Capacidade máxima de transferência de dados da rede em um determinado período de tempo.                           |
-| Disponibilidade do Serviço       | Porcentagem de tempo que o serviço está disponível e funcionando corretamente.                                    |
 
 <div align="center">
   <img src="Baseline_Testing.png" alt="Performance Planning">

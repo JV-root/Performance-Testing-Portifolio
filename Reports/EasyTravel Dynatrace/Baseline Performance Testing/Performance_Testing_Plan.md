@@ -77,8 +77,6 @@ During the tests, a gradual ramp-up of users will be implemented to simulate a p
 | Load Stabilization              | The load is kept constant at 30 users for a period of 10 minutes.                                                   |
 | Gradual Thread Termination      | After the 10-minute load stabilization, the threads are gradually terminated every 20 seconds.                      |
 | Total Test Duration             | The test will have a total duration of 30 minutes.                                                                  |
-| Bandwidth                       | The maximum data transfer capacity of the network within a certain period of time.                                  |
-| Service Availability            | The percentage of time that the service is available and functioning correctly.                                      |
 
 <div align="center">
     <img src="Baseline_Testing.png" alt="Performance Planning">
