@@ -71,11 +71,14 @@ The performance tests will be conducted in environments with the following confi
 ### 4.5 Simultaneous Users (VUs) Ramp-up
 During the tests, a gradual ramp-up of users will be implemented to simulate a progressive increase in load. The user ramp-up configuration will be as follows:
 
-- The test will start with 1 user, and every 22 seconds, a new user will be added.
-- The total number of users will be reached in 30 minutes.
-- The load will be kept constant at 30 users for a period of 10 minutes.
-- After this period, the threads will be gradually terminated every 20 seconds.
-- The test will have a total duration of 30 minutes.
+| Step                            | Description                                                                                                         |
+|---------------------------------|---------------------------------------------------------------------------------------------------------------------|
+| Test Start                      | Starts with 1 user. Every 22 seconds, a new user is added until reaching the total number in 15 minutes.           |
+| Load Stabilization              | The load is kept constant at 30 users for a period of 10 minutes.                                                   |
+| Gradual Thread Termination      | After the 10-minute load stabilization, the threads are gradually terminated every 20 seconds.                      |
+| Total Test Duration             | The test will have a total duration of 30 minutes.                                                                  |
+| Bandwidth                       | The maximum data transfer capacity of the network within a certain period of time.                                  |
+| Service Availability            | The percentage of time that the service is available and functioning correctly.                                      |
 
 <div align="center">
     <img src="Baseline_Testing.png" alt="Performance Planning">

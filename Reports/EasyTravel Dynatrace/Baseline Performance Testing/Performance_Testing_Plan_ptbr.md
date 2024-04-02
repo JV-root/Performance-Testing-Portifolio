@@ -76,11 +76,14 @@ Os testes de desempenho serão realizados em ambientes com a seguintes configura
 ### 4.5 Rampa de Usuários Simultâneos (VUs)
 Durante os testes, será implementada uma rampa gradual de usuários para simular um aumento progressivo na carga. A configuração da rampa de usuários será a seguinte:
 
-- O teste iniciará com 1 usuário e, a cada 22 segundos, um novo usuário será adicionado.
-- O número total de usuários será alcançado em 30 minutos.
-- A carga será mantida constante em 30 usuários por um período de 10 minutos.
-- Após esse período, as threads serão gradualmente encerradas a cada 20 segundos.
-- O teste terá uma duração total de 30 minutos.
+| Etapa                            | Descrição                                                                                                         |
+|----------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| Início do Teste                  | Inicia com 1 usuário. A cada 22 segundos, um novo usuário é adicionado até alcançar o número total em 15 minutos. |
+| Estabilização da Carga           | A carga é mantida constante em 30 usuários por um período de 10 minutos.                                          |
+| Encerramento Gradual das Threads | Após os 10 minutos de estabilização, as threads são gradualmente encerradas a cada 20 segundos.                   |
+| Duração Total do Teste           | O teste terá uma duração total de 30 minutos.                                                                     |
+| Largura de Banda                 | Capacidade máxima de transferência de dados da rede em um determinado período de tempo.                           |
+| Disponibilidade do Serviço       | Porcentagem de tempo que o serviço está disponível e funcionando corretamente.                                    |
 
 <div align="center">
   <img src="Baseline_Testing.png" alt="Performance Planning">
