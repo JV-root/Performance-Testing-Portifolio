@@ -66,9 +66,13 @@ scrape_configs:
   static_configs:
   - targets: ['PUT_HERE_YOUR_IP:9100']
 
+sudo systemctl restart prometheus
 
-systemctl restart prometheus
+sudo systemctl status prometheus
 
-systemctl status prometheus
+# Restart Prometheus service:
+sudo nano /etc/prometheus/prometheus.yml
 
+sudo systemctl restart prometheus
 
+sudo systemctl status prometheus

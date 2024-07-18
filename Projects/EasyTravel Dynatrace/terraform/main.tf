@@ -66,10 +66,10 @@ resource "aws_security_group" "Easy_Travel_security_group" {
 
 
 
-# Criação da instância EC2
+# Criação da instância EC2 - Aplicação Easy Travel
 resource "aws_instance" "Easy_Travel_Instance" {
   ami           = "ami-0ac2886caf2877ccd"
-  instance_type = "t2.medium"
+  instance_type = "t2.large"
   key_name = "Easy_Travel_Terraform"
 
   subnet_id     = aws_subnet.Easy_Travel_Subnet.id
@@ -109,7 +109,7 @@ resource "null_resource" "Easy_Travel_trigger" {
 # INJETORA JMETER
 # Criação da segunda instância EC2
 resource "aws_instance" "JMeter_Server" {
-  ami           = "ami-0ac2886caf2877ccd"
+  ami           = "ami-01f17a8ec3e3d66e3"
   instance_type = "t2.medium"
   key_name      = "Easy_Travel_Terraform"
 

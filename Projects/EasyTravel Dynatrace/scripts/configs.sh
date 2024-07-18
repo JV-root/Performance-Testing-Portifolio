@@ -22,9 +22,7 @@ fi
 java -jar dynatrace-easytravel-linux-x86_64.jar
 
 # entrar no diretório do easy_travel
-cd easytravel-2.0.0-x64/
-
-cd weblauncher/
+cd easytravel-2.0.0-x64/weblauncher/
 
 chmod 777 weblauncher.sh 
 

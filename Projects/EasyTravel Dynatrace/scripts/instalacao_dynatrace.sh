@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Variáveis de configuração
-DYNATRACE_ENVIRONMENT="ghe69892"
-DYNATRACE_API_TOKEN="dt0c01.L2K4A7D22CVJVOKPW5JCGOCE.OXHNGCH2CYU4SZJTAD6S6JYGWI7PBQRUTFKBZUOTZ5TBV5G2PZ4QVNL3SM4P2KBM"
+DYNATRACE_ENVIRONMENT=""
+DYNATRACE_API_TOKEN=""
 
 # Verificar se o agente já está instalado
 if [ -d "/opt/dynatrace/oneagent" ]; then

@@ -17,7 +17,7 @@ def delete_rows(file_path, num_rows):
     print("Rows deleted successfully.")
 
 # Example usage
-file_path = 'dados.csv'
-num_rows = 40000
+file_path = 'Massa_Dados.csv'
+num_rows = 50000
 
 delete_rows(file_path, num_rows)
